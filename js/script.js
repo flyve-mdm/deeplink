@@ -9,14 +9,13 @@ var data = url.searchParams.get("data")
 var re = new RegExp(';')
 encodedData = data.split(re)
 
-
 function getDecodedData(item, index) {
     return window.atob(item)
 }
 
 var decodedData = encodedData.map(getDecodedData);
 
-console.log(decodedData)
+// QR
 var qr = new QRious({
             element: document.getElementById('qr'),
             value: url_string
@@ -42,3 +41,7 @@ var email = document.createElement("a")
 email.setAttribute('href',`mailto:${decodedData[3]}`)
 email.textContent = decodedData[3]
 document.getElementById('email').appendChild(email)
+
+document.getElementById('btn').addEventListener('click', function() {
+    location.reload()
+})
