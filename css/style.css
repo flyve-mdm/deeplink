@@ -35,3 +35,19 @@ a {
     text-decoration: none;
     color: #008785;  
 }
+button {
+    padding: 9px 12px 10px;
+    background-color: #008785;  
+    color: #FFF;
+    font-weight: 400;
+    min-width: 120px;
+    line-height: 1;
+    border: 1px solid transparent;
+    margin: 12px auto;
+    text-align: center;
+    display: block;
+    white-space: nowrap;
+    border-radius: 0;
+    touch-action: manipulation;
+    cursor: pointer;
+}
