@@ -18,7 +18,6 @@ header .message {
     background-color: #008785;
 }
 header .message a {
-    text-decoration: none;
     color: #FFF;
     line-height: 45px;
 }
@@ -27,4 +26,12 @@ header .message img {
     vertical-align: middle;
     width: 20px;
     padding: 2px 0;
+}
+.content {
+    text-align: center;
+    padding: 40px 0;
+}
+a {
+    text-decoration: none;
+    color: #008785;  
 }

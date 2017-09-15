@@ -21,3 +21,24 @@ var qr = new QRious({
             element: document.getElementById('qr'),
             value: url_string
         })
+
+// name company
+document.getElementById('company_name').innerHTML = decodedData[0]
+
+// phone
+var phone = document.createElement("a")
+phone.setAttribute('href',`callto:${decodedData[1]}`)
+phone.textContent = decodedData[1]
+document.getElementById('phone').appendChild(phone)
+
+// url
+var url = document.createElement("a")
+url.setAttribute('href',decodedData[2])
+url.textContent = decodedData[2]
+document.getElementById('url').appendChild(url)
+
+// email
+var email = document.createElement("a")
+email.setAttribute('href',`mailto:${decodedData[3]}`)
+email.textContent = decodedData[3]
+document.getElementById('email').appendChild(email)
