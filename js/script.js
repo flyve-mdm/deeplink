@@ -17,3 +17,7 @@ function getDecodedData(item, index) {
 var decodedData = encodedData.map(getDecodedData);
 
 console.log(decodedData)
+var qr = new QRious({
+            element: document.getElementById('qr'),
+            value: url_string
+        })
