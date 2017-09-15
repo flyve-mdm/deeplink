@@ -1,0 +1,30 @@
+
+@font-face {
+font-family: selawk;
+src: url(fonts/selawk.ttf);
+}
+body {
+    background-color: #FFF;
+    font-family: selawk, Helvetica, Arial, sans-serif;
+}
+header .logo {
+    padding: 14px 16px;
+}
+header .logo img {
+    height: 31px;
+}
+header .message {
+    text-align: center;
+    background-color: #008785;
+}
+header .message a {
+    text-decoration: none;
+    color: #FFF;
+    line-height: 45px;
+}
+
+header .message img {
+    vertical-align: middle;
+    width: 20px;
+    padding: 2px 0;
+}
