@@ -66,9 +66,9 @@ var openFlyve = function () {
             if (!document.hidden) {
                 var OS = getMobileOperatingSystem()
                 if ( OS == 'Android') {
-                    window.location = "https://play.google.com/";
+                    window.location = "https://play.google.com/store/apps/details?id=org.flyve.mdm.agent";
                 } else if (OS == iOS) {
-                    window.location = "https://itunes.apple.com/";
+                    window.location = "https://itunes.apple.com/us/app/flyve-mdm-agent";
                 }
             }
         }, 2000)
