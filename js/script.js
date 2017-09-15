@@ -1,8 +1,4 @@
-// var encodedData = window.btoa('Hello, world'); // encode a string
-// console.log(encodedData)
-// var decodedData = window.atob(encodedData); // decode the string
-// console.log(decodedData)
-
+// detect OS
 function getMobileOperatingSystem() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera
 
@@ -17,9 +13,7 @@ function getMobileOperatingSystem() {
     return "unknown";
 }
 
-
-console.log(getMobileOperatingSystem())
-
+// get data of the url
 var url_string = window.location.href
 var url = new URL(url_string)
 var data = url.searchParams.get("data")
@@ -59,6 +53,29 @@ email.setAttribute('href',`mailto:${decodedData[3]}`)
 email.textContent = decodedData[3]
 document.getElementById('email').appendChild(email)
 
+// button "Go to Flyve MDM"
 document.getElementById('btn').addEventListener('click', function() {
     location.reload()
 })
+
+// redirect to the store in case of not opening the application
+var openFlyve = function () { 
+    var open = confirm("Open flyve MDM?")
+    if (open) {
+        setTimeout( function()  { 
+            if (!document.hidden) {
+                var OS = getMobileOperatingSystem()
+                if ( OS == 'Android') {
+                    window.location = "https://play.google.com/";
+                } else if (OS == iOS) {
+                    window.location = "https://itunes.apple.com/";
+                }
+            }
+        }, 2000)
+    }
+}
+window.onload = openFlyve()
+
+
+
+
