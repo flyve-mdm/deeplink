@@ -1,3 +1,10 @@
-var decodedData = window.atob("http://api.domain.com/glpi/apirest.php;45erjbudklq5865sdkjhjks;lkhjfkgsdf546634s;company's helpdesk;+33123456789;https://support.company.com;support@company.com;"); // decode the string
+// var encodedData = window.btoa('Hello, world'); // encode a string
+// console.log(encodedData)
+// var decodedData = window.atob(encodedData); // decode the string
+// console.log(decodedData)
 
-console.log(decodedData)
+var url_string = window.location.href
+var url = new URL(url_string)
+var data = url.searchParams.get("data")
+var re = new RegExp(';');
+myArray = data.split(re);
