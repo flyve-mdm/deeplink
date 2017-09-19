@@ -86,14 +86,14 @@ if ( OS == 'Android' || OS == 'iOS' ) {
             cont ++
             if (document.hidden) clearInterval(timer)
             else if (!document.hidden && cont > 3 ) {
-                if ( OS == 'Android') window.location.href = "market://details?id=org.flyve.mdm.agent"
-                else if (OS == 'iOS') window.location.href = "https://itunes.apple.com/us/app/flyve-mdm-agent"
+                if ( OS == 'Android') window.location.replace("market://details?id=org.flyve.mdm.agent")
+                else if (OS == 'iOS') window.location.replace("https://itunes.apple.com/us/app/flyve-mdm-agent")
             } 
             console.log(cont)
         }, 1000)
         window.setTimeout(function() {
             clearInterval(timer)
-        }, 4000)
+        }, 5000)
     })
     document.getElementById('email').appendChild(btn)
 } 
