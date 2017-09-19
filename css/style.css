@@ -7,9 +7,6 @@ body {
     background-color: #FFF;
     font-family: selawk, Helvetica, Arial, sans-serif;
 }
-/*header .logo {
-    height: 48px
-}*/
 header .navbar-header {
     width: 90%;
     margin: 0 auto;
@@ -28,6 +25,7 @@ header .logo img {
 header .message {
     text-align: center;
     background-color: #008785;
+    height: 45px;
 }
 header .message a {
     color: #FFF;
