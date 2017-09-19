@@ -52,11 +52,12 @@ email.setAttribute('href',`mailto:${decodedData[6]}`)
 email.textContent = decodedData[6]
 document.getElementById('email').appendChild(email)
 
+var clickEvent = ((document.ontouchstart!==null)?'click':'touchstart')
+
 // button "Enroll Device"
 if ( OS == 'Android' || OS == 'iOS' ) {
     var btn = document.createElement("button")
     btn.textContent = "Enroll Device"
-    var clickEvent = ((document.ontouchstart!==null)?'click':'touchstart')
     btn.addEventListener(clickEvent, function() {
         window.location.replace(deeplink)
         var timer = setTimeout( function()  { 
@@ -69,5 +70,19 @@ if ( OS == 'Android' || OS == 'iOS' ) {
             clearInterval(timer)
         })
     })
-    document.getElementById('email').appendChild(btn)
+    document.getElementById('btn').appendChild(btn)
 } 
+
+// button show
+if ( OS == 'Android' || OS == 'iOS' ) { 
+    document.getElementById('qr').className = "hidden" 
+    var btn_show = document.createElement("button")
+    var hr = document.createElement("hr")
+    btn_show.textContent = "Show QR to enroll another device"
+    btn_show.addEventListener(clickEvent, function() {
+        document.getElementById('qr').className = ""
+        document.getElementById('btn-show').className = "hidden"
+    })
+    document.getElementById('email').appendChild(hr)    
+    document.getElementById('btn-show').appendChild(btn_show)    
+}
