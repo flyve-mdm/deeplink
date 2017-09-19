@@ -59,19 +59,15 @@ if ( OS == 'Android' || OS == 'iOS' ) {
     var clickEvent = ((document.ontouchstart!==null)?'click':'touchstart')
     btn.addEventListener(clickEvent, function() {
         window.location.replace(deeplink)
-        var cont = 0
-        var timer = setInterval( function()  { 
-            cont ++
-            if (document.hidden) clearInterval(timer)
-            else if (!document.hidden && cont > 3 ) {
+        var timer = setTimeout( function()  { 
+            if (!document.hidden) {
                 if ( OS == 'Android') window.location.replace("market://details?id=org.flyve.mdm.agent")
                 else if (OS == 'iOS') window.location.replace("https://itunes.apple.com/us/app/flyve-mdm-agent")
             } 
-            console.log(cont)
-        }, 1000)
-        window.setTimeout(function() {
+        }, 4000)
+        document.addEventListener("visibilitychange", function() {
             clearInterval(timer)
-        }, 5000)
+        })
     })
     document.getElementById('email').appendChild(btn)
 } 
