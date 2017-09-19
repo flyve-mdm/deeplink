@@ -41,6 +41,7 @@ var urlParams = parseURLParams(urlString)
 var data = urlParams.data
 
 var deeplink = `flyve://register?data=${data}`
+console.log(deeplink)
 data = window.atob(data)
 var myRe = /\\;/g
 var decodedData = data.split(myRe)
@@ -77,7 +78,8 @@ document.getElementById('email').appendChild(email)
 if ( OS == 'Android' || OS == 'iOS' ) {
     var btn = document.createElement("button")
     btn.textContent = "Enroll Device"
-    btn.addEventListener('click', function() {
+    var clickEvent = ((document.ontouchstart!==null)?'click':'touchstart')
+    btn.addEventListener(clickEvent, function() {
         window.location.replace(deeplink)
         var cont = 0
         var timer = setInterval( function()  { 
