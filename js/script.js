@@ -19,15 +19,19 @@ var OS = getMobileOperatingSystem()
 var url_string = window.location.href
 var url = new URL(url_string)
 var data = url.searchParams.get("data")
+var deeplink = `flyve://register?data=${data}`
 data = window.atob(data)
 var myRe = /\\;/g
 var decodedData = data.split(myRe)
+
+
+console.log(deeplink)
 
 // QR
 var qr = new QRious({
             element: document.getElementById('qr'),
             size: 200,
-            value: data
+            value: deeplink
         })
 
 // name company
@@ -56,7 +60,7 @@ if ( OS == 'Android' || OS == 'iOS' ) {
     var btn = document.createElement("button")
     btn.textContent = "Enroll Device"
     btn.addEventListener('click', function() {
-        window.location.replace(data)
+        window.location.replace(deeplink)
         setTimeout( function()  { 
             if (!document.hidden) {
                 if ( OS == 'Android') {

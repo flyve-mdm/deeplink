@@ -42,6 +42,7 @@ header .message img {
 .content {
     text-align: center;
     padding: 40px 0;
+    line-height: 25px;
 }
 a {
     text-decoration: none;
