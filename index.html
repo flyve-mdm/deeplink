@@ -1,24 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Flyve MDM</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Flyve MDM Agent</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:title" content="Flyve MDM">
+<meta property="og:image" content="img/logo2.png">
+<meta property="og:site_name" content="Flyve MDM">
+<meta property="og:description" content="Enroll your device">
+
+<meta property="twitter:title" content="Flyve MDM">
+<meta property="twitter:image" content="img/logo2.png">
+<meta property="twitter:site" content="@FlyveMDM">
+
+<!--<meta property="al:ios:app_store_id" content="#########">-->
+<meta property="al:ios:app_name" content="Flyve MDM Agent">
+<!--<meta property="al:ios:url" content="flyve://....">-->
+
+<!--<meta property="al:android:url" content="flyve://....">-->
+<meta property="al:android:app_name" content="Flyve MDM Agent">
+<!--<meta property="al:android:package" content="*****">-->
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FlyveMDM">
+<meta name="twitter:description" content="Enroll your device">
+<meta name="twitter:app:name:iphone" content="Flyve MDM Agent">
+<!--<meta name="twitter:app:id:iphone" content="#########">-->
+<!--<meta name="twitter:app:url:iphone" content="flyve://....">-->
+<meta name="twitter:app:name:ipad" content="Flyve MDM Agent">
+<!--<meta name="twitter:app:id:ipad" content="#########">-->
+<!--<meta name="twitter:app:url:ipad" content="flyve://....">-->
+<meta name="twitter:app:name:googleplay" content="Flyve MDM Agent">
+<!--<meta name="twitter:app:id:googleplay" content="*****">-->
+<!--<meta name="twitter:app:url:googleplay" content="xxxxxxxx">-->
+
+<!--<meta name="apple-itunes-app" content="app-id=#########, app-argument: flyve://....">-->
+
+
         <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <script>
+            // get data of the url
+            var url_string = window.location.href
+            var url = new URL(url_string)
+            var data = url.searchParams.get("data")
+            console.log(data)
+            if (data == undefined) window.location = 'http://flyve.org/'
+        </script>
     </head>
     <body>
         <header>
             <div class="logo">
                 <div class="navbar-header">
                     <div class="navbar-brand">
-                        <img src="img/logo.png" alt="Flyve MDM">
+                        <img src="img/logo.png" alt="Flyve MDM Agent">
                     </div>
                 </div>
             </div>
             <div class="message">
                 <a href="https://flyve-mdm.com/">
-                    Still not using Flyve MDM? Find out how! <img src="img/forward.png"/> 
+                    Still not using Flyve MDM Agent? Find out how! <img src="img/forward.png"/> 
                 </a>
             </div>
         </header>
