@@ -40,12 +40,9 @@
 
         <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <script src="js/getData.js"></script>
         <script>
-            // get data of the url
-            var url_string = window.location.href
-            var url = new URL(url_string)
-            var data = url.searchParams.get("data")
-            if (data == undefined) window.location = 'http://flyve.org/'
+            if (getData("data") == undefined) window.location = 'http://flyve.org/'
         </script>
     </head>
     <body>
