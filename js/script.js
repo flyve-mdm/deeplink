@@ -58,15 +58,19 @@ if ( OS == 'Android' || OS == 'iOS' ) {
     btn.textContent = "Enroll Device"
     btn.addEventListener('click', function() {
         window.location.replace(deeplink)
-        setTimeout( function()  { 
-            if (!document.hidden) {
-                if ( OS == 'Android') {
-                    window.location = "market://details?id=org.flyve.mdm.agent"
-                } else if (OS == 'iOS') {
-                    window.location = "https://itunes.apple.com/us/app/flyve-mdm-agent"
-                }
-            }
-        }, 3000)
+        var cont = 0
+        var timer = setInterval( function()  { 
+            cont ++
+            if (document.hidden) clearInterval(timer)
+            else if (!document.hidden && cont > 3 ) {
+                if ( OS == 'Android') window.location.href = "market://details?id=org.flyve.mdm.agent"
+                else if (OS == 'iOS') window.location.href = "https://itunes.apple.com/us/app/flyve-mdm-agent"
+            } 
+            console.log(cont)
+        }, 1000)
+        window.setTimeout(function() {
+            clearInterval(timer)
+        }, 4000)
     })
     document.getElementById('email').appendChild(btn)
 } 
