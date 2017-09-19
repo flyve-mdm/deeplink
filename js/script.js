@@ -24,9 +24,6 @@ data = window.atob(data)
 var myRe = /\\;/g
 var decodedData = data.split(myRe)
 
-
-console.log(deeplink)
-
 // QR
 var qr = new QRious({
             element: document.getElementById('qr'),
@@ -64,9 +61,9 @@ if ( OS == 'Android' || OS == 'iOS' ) {
         setTimeout( function()  { 
             if (!document.hidden) {
                 if ( OS == 'Android') {
-                    window.location = "https://play.google.com/store/apps/details?id=org.flyve.mdm.agent";
+                    window.location = "market://details?id=org.flyve.mdm.agent"
                 } else if (OS == 'iOS') {
-                    window.location = "https://itunes.apple.com/us/app/flyve-mdm-agent";
+                    window.location = "https://itunes.apple.com/us/app/flyve-mdm-agent"
                 }
             }
         }, 3000)
