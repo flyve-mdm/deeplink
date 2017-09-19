@@ -48,8 +48,6 @@ a {
 }
 button {
     padding: 9px 12px 10px;
-    background-color: #008785;  
-    color: #FFF;
     font-weight: 400;
     min-width: 120px;
     line-height: 1;
@@ -61,4 +59,19 @@ button {
     border-radius: 0;
     touch-action: manipulation;
     cursor: pointer;
+}
+#btn button{
+    background-color: #008785;
+    color: #FFF;
+}
+#btn-show button{
+    background-color: rgba(62,62,62,.3);
+    color: #3e3e3e;
+}
+hr {
+    width: 60%;
+    margin: 40px auto;
+}
+.hidden {
+    display: none;
 }
