@@ -56,10 +56,11 @@ var clickEvent = ((document.ontouchstart!==null)?'click':'touchstart')
 
 // button "Enroll Device"
 if ( OS == 'Android' || OS == 'iOS' ) {
-    var btn = document.createElement("button")
+    var btn = document.createElement("a")
     btn.textContent = "Enroll Device"
+    btn.setAttribute('href',deeplink)
+    btn.setAttribute('class','button')
     btn.addEventListener(clickEvent, function() {
-        window.location.replace(deeplink)
         var timer = setTimeout( function()  { 
             if (!document.hidden) {
                 if ( OS == 'Android') window.location.replace("market://details?id=org.flyve.mdm.agent")
@@ -77,12 +78,15 @@ if ( OS == 'Android' || OS == 'iOS' ) {
 if ( OS == 'Android' || OS == 'iOS' ) { 
     document.getElementById('qr').className = "hidden" 
     var btn_show = document.createElement("button")
-    var hr = document.createElement("hr")
     btn_show.textContent = "Show QR to enroll another device"
+    btn_show.setAttribute('class','button')
     btn_show.addEventListener(clickEvent, function() {
         document.getElementById('qr').className = ""
+        document.getElementById('img').className = "hidden"
         document.getElementById('btn-show').className = "hidden"
     })
-    document.getElementById('email').appendChild(hr)    
     document.getElementById('btn-show').appendChild(btn_show)    
 }
+
+
+console.log(deeplink)
