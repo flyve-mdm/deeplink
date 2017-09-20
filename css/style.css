@@ -81,5 +81,10 @@ fieldset {
     padding: 0 50px 50px;
 }
 .content img {
-    max-width: 240px;
+    max-width: 200px;
+    width: 30%;
+}
+#company_name {
+    font-size: 30px;
+    margin: 0 10px 20px;
 }
