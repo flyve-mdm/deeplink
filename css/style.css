@@ -46,7 +46,7 @@ a {
     text-decoration: none;
     color: #008785;  
 }
-button {
+.button {
     padding: 9px 12px 10px;
     font-weight: 400;
     min-width: 120px;
@@ -59,12 +59,13 @@ button {
     border-radius: 0;
     touch-action: manipulation;
     cursor: pointer;
+    display: inline-block;
 }
-#btn button{
+#btn .button{
     background-color: #008785;
     color: #FFF;
 }
-#btn-show button{
+#btn-show .button{
     background-color: rgba(62,62,62,.3);
     color: #3e3e3e;
 }
@@ -74,4 +75,11 @@ hr {
 }
 .hidden {
     display: none;
+}
+fieldset {
+    display: inline-block;
+    padding: 0 50px 50px;
+}
+.content img {
+    max-width: 240px;
 }
