@@ -1,0 +1,90 @@
+
+@font-face {
+font-family: selawk;
+src: url(fonts/selawk.ttf);
+}
+body {
+    background-color: #FFF;
+    font-family: selawk, Helvetica, Arial, sans-serif;
+}
+header .navbar-header {
+    width: 90%;
+    margin: 0 auto;
+}
+header .navbar-brand {
+    height: 48px;
+    display:flex;
+    align-items: center;
+    margin-left: 10px;
+}
+header .logo img {
+    height: 23px;
+    vertical-align: middle;
+}
+
+header .message {
+    text-align: center;
+    background-color: #008785;
+    height: 45px;
+}
+header .message a {
+    color: #FFF;
+    line-height: 48px;
+}
+
+header .message img {
+    vertical-align: middle;
+    width: 20px;
+    padding: 2px 0;
+}
+.content {
+    text-align: center;
+    padding: 40px 0;
+    line-height: 25px;
+}
+a {
+    text-decoration: none;
+    color: #008785;  
+}
+.button {
+    padding: 9px 12px 10px;
+    font-weight: 400;
+    min-width: 120px;
+    line-height: 1;
+    border: 1px solid transparent;
+    margin: 12px auto;
+    text-align: center;
+    display: block;
+    white-space: nowrap;
+    border-radius: 0;
+    touch-action: manipulation;
+    cursor: pointer;
+    display: inline-block;
+}
+#btn .button{
+    background-color: #008785;
+    color: #FFF;
+}
+#btn-show .button{
+    background-color: rgba(62,62,62,.3);
+    color: #3e3e3e;
+}
+hr {
+    width: 60%;
+    margin: 40px auto;
+}
+.hidden {
+    display: none;
+}
+fieldset {
+    display: inline-block;
+    padding: 0 50px 50px;
+}
+.content img {
+    max-width: 200px;
+    width: 30%;
+}
+#company_name {
+    font-size: 30px;
+    margin: 0 10px 20px;
+}

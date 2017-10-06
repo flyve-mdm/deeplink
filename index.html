@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flyve MDM Agent</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta property="og:title" content="Flyve MDM">
+        <meta property="og:image" content="img/logo2.png">
+        <meta property="og:site_name" content="Flyve MDM">
+        <meta property="og:description" content="Enroll your device">
+
+        <meta property="twitter:title" content="Flyve MDM">
+        <meta property="twitter:image" content="img/logo2.png">
+        <meta property="twitter:site" content="@FlyveMDM">
+
+        <!--<meta property="al:ios:app_store_id" content="#########">-->
+        <meta property="al:ios:app_name" content="Flyve MDM Agent">
+        <!--<meta property="al:ios:url" content="flyve://....">-->
+
+        <!--<meta property="al:android:url" content="flyve://....">-->
+        <meta property="al:android:app_name" content="Flyve MDM Agent">
+        <meta property="al:android:package" content="org.flyve.mdm.agent">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@FlyveMDM">
+        <meta name="twitter:description" content="Enroll your device">
+        <meta name="twitter:app:name:iphone" content="Flyve MDM Agent">
+        <!--<meta name="twitter:app:id:iphone" content="#########">-->
+        <!--<meta name="twitter:app:url:iphone" content="flyve://....">-->
+        <meta name="twitter:app:name:ipad" content="Flyve MDM Agent">
+        <!--<meta name="twitter:app:id:ipad" content="#########">-->
+        <!--<meta name="twitter:app:url:ipad" content="flyve://....">-->
+        <meta name="twitter:app:name:googleplay" content="Flyve MDM Agent">
+        <meta name="twitter:app:id:googleplay" content="org.flyve.mdm.agent">
+        <meta name="twitter:app:url:googleplay" content="market://details?id=org.flyve.mdm.agent">
+
+        <!--<meta name="apple-itunes-app" content="app-id=#########, app-argument: flyve://....">-->
+
+        <script 
+            src="/js/bugsnag-3.min.js"
+            data-apikey="fab38c004e4e4cf378f09b64bf2929f6"
+        ></script> 
+
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/getData.js"></script>
+        <script>
+            if (getData("data") == undefined) window.location = 'http://flyve.org/'
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <div class="navbar-header">
+                    <div class="navbar-brand">
+                        <img src="img/logo.png" alt="Flyve MDM Agent">
+                    </div>
+                </div>
+            </div>
+            <div class="message">
+                <a href="https://flyve-mdm.com/">
+                    Still not using Flyve MDM Agent? Find out how! <img src="img/forward.png"/> 
+                </a>
+            </div>
+        </header>
+        <section class="page">
+            <div class="content">
+                <img id="img" src="img/logo2.png"/>
+                <canvas id="qr"></canvas>
+                <p id="Helpdesk"><b>Helpdesk Informations</b></p>
+                <p id="company_name"></p>
+                <div id="phone"></div>
+                <div id="url"></div>
+                <div id="email"></div>
+                <br />
+                <div id="btn"></div>
+                <div id="btn-show"></div>
+            </div>
+        </section>
+    </body>
+    <script src="js/qrious.js"></script>
+    <script src="js/script.js"></script>
+</html>
