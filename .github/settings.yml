@@ -1,7 +1,7 @@
 repository:
-  name: flyve-mdm-deeplink
+  name: deeplink
   description: Web site to resolve FLyve MDM deeplinks
-  homepage: https://github.com/flyve-mdm/flyve-mdm-deeplink
+  homepage: https://github.com/flyve-mdm/deeplink
   topics: flyve-mdm, deeplink
   private: false
   has_issues: true
