@@ -18,7 +18,7 @@ var OS = getMobileOperatingSystem()
 // get data of the url
 var data = getData("data")
 
-var deeplink = `flyve://register?data=${data}`
+var deeplink = `flyve://register?data=${data}=`
 console.log(deeplink)
 data = window.atob(data)
 var myRe = /\\;/g
