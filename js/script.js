@@ -18,8 +18,8 @@ var OS = getMobileOperatingSystem()
 // get data of the url
 var data = getData("data")
 
-var deeplink = `flyve://register?data=${data}=`
-console.log(deeplink)
+var deeplink = `flyve://register?data=${data}`
+
 data = window.atob(data)
 var myRe = /\\;/g
 var decodedData = data.split(myRe)
@@ -87,6 +87,3 @@ if ( OS == 'Android' || OS == 'iOS' ) {
     })
     document.getElementById('btn-show').appendChild(btn_show)    
 }
-
-
-console.log(deeplink)
