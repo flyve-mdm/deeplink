@@ -27,7 +27,7 @@ var decodedData = data.split(myRe)
 // QR
 var qr = new QRious({
             element: document.getElementById('qr'),
-            size: 200,
+            size: 320,
             value: deeplink
         })
 
