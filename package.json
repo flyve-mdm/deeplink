@@ -1,0 +1,15 @@
+{
+  "name": "deeplink",
+  "version": "1.0.0",
+  "description": "Web site to resolve FLyve MDM deeplinks ",
+  "main": "site/index.html",
+  "repository": "git@github.com:flyve-mdm/deeplink.git",
+  "author": "Gianfranco Manganiello <gmanganiello@teclib.com>",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
+  },
+  "scripts": {
+    "deploy": "yarn gh-pages --dist site/ --message 'build(deeplink): update site'"
+  }
+}
