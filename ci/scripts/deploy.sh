@@ -1,5 +1,5 @@
 #!/bin/bash
 
 if [[ $CIRCLE_BRANCH = "develop" ]]; then
-    git checkout gh-pages
+    yarn deploy
 fi
