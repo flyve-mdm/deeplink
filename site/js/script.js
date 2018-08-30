@@ -18,7 +18,7 @@ var OS = getMobileOperatingSystem()
 // get data of the url
 var data = getData("data")
 
-var deeplink = `flyve://register?data=${data}`
+var deeplink = `${window.appConfig.deeplinkBase}?data=${data}`
 
 data = window.atob(data)
 var myRe = /\\;/g
@@ -63,8 +63,8 @@ if ( OS == 'Android' || OS == 'iOS' ) {
     btn.addEventListener(clickEvent, function() {
         var timer = setTimeout( function()  { 
             if (!document.hidden) {
-                if ( OS == 'Android') window.location.replace("market://details?id=org.flyve.mdm.agent")
-                else if (OS == 'iOS') window.location.replace("https://itunes.apple.com/us/app/flyve-mdm-agent")
+                if ( OS == 'Android') window.location.replace(window.appConfig.androidDefaultLink)
+                else if (OS == 'iOS') window.location.replace(window.appConfig.iosDefaultLink)
             } 
         }, 4000)
         document.addEventListener("visibilitychange", function() {
