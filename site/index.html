@@ -39,10 +39,8 @@
 
         <script src="config.js"></script>
 
-        <script 
-            src="js/bugsnag-3.min.js"
-            data-apikey="fab38c004e4e4cf378f09b64bf2929f6"
-        ></script> 
+        <script src="js/bugsnag.min.js"></script> 
+        <script>window.bugsnagClient = bugsnag(window.appConfig.bugsnagApiKey)</script>
 
         <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
