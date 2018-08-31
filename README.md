@@ -16,6 +16,7 @@ To get started, check out [Flyve MDM website](https://flyve-mdm.com/)!
 ## Table of Contents
 
 * [Synopsis](#synopsis)
+* [Installation](#installation)
 * [Versioning](#versioning)
 * [Contact](#contact)
 * [Professional Services](#professional-services)
@@ -25,6 +26,45 @@ To get started, check out [Flyve MDM website](https://flyve-mdm.com/)!
 ## Synopsis
 
 Web site to resolve flyve:// deeplinks
+
+The project consist in static html files to display the information for enrollment, the most important folder is site.
+
+### Information display
+
+The deeplink features three ways to display the information to execute the enrollment.
+
+#### Email account
+
+When the invitation is opened from the email account of the user, in the respective device to enroll, the email will display the deeplink with the information of the invitation encoded. Also the QR code image is attached.
+
+After opening the link the MDM Agent will recognize it and start the enrollment.
+
+#### QR code display
+
+The deeplink can also be opened in a computer's browser, in this case the deeplink will decode part of the information and display the Helpdesk information and the QR code, so the user can scan it from the MDM Agent and make the enrollment.
+
+#### Mobile device browser
+
+In case the invitation is opened with the browser of the device, it will display a button that contains the deeplink so the MDM Agent can recognize it and start the enrollment.
+
+### Redirect to the Play Store
+
+If the App isn't installed, the deeplink will redirect to the Play Store to download the MDM Agent in order to proceed with the enrollment.
+
+## Installation
+
+To host your own instance of Flyve MDM Deeplink microservice, just follow these steps:
+
+1. Clone the project in your server directory
+2. Add your settings in the ```site/config.example.js file```, then rename it to ```site/config.js```
+    * **defaultLocation**: the address to redirect in case there is no data to process by the deeplink
+    * **bugsnagApiKey**: optional, the apikey to your bugsnag
+    * **deeplinkBase**: the customroute for your app, for example: ```flyve://register```
+    * **androidDefaultLink**: the route of your application in the market place
+    * **iosDefaultLink**: the route of your application in the apple store
+3. Add your deeplink route in Flyve MDM settings in GLPI
+    * Go to Flyve MDM > General configuration > Invitation deeplink
+    * Write ```http://my-site/deeplink/site/```
 
 ## Versioning
 
