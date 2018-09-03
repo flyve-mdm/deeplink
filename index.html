@@ -37,16 +37,16 @@
 
         <!--<meta name="apple-itunes-app" content="app-id=#########, app-argument: flyve://....">-->
 
-        <script 
-            src="/js/bugsnag-3.min.js"
-            data-apikey="fab38c004e4e4cf378f09b64bf2929f6"
-        ></script> 
+        <script src="config.js"></script>
+
+        <script src="js/bugsnag.min.js"></script> 
+        <script>window.bugsnagClient = bugsnag(window.appConfig.bugsnagApiKey)</script>
 
         <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <script src="js/getData.js"></script>
         <script>
-            if (getData("data") == undefined) window.location = 'http://flyve.org/'
+            if (getData("data") == undefined) window.location = window.appConfig.defaultLocation
         </script>
     </head>
     <body>
