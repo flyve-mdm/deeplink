@@ -18,7 +18,7 @@ var OS = getMobileOperatingSystem()
 // get data of the url
 var data = getData("data")
 
-var deeplink = `${window.appConfig.deeplinkBase}?data=${data}`
+var deeplink = window.appConfig.deeplinkBase + '?data=' + data
 
 data = window.atob(data)
 var myRe = /\\;/g
@@ -36,19 +36,19 @@ document.getElementById('company_name').innerHTML = decodedData[3]
 
 // phone
 var phone = document.createElement("a")
-phone.setAttribute('href',`callto:${decodedData[4]}`)
+phone.setAttribute('href', 'callto:' + decodedData[4])
 phone.textContent = decodedData[4]
 document.getElementById('phone').appendChild(phone)
 
 // url
 var url = document.createElement("a")
-url.setAttribute('href',decodedData[5])
+url.setAttribute('href', decodedData[5])
 url.textContent = decodedData[5]
 document.getElementById('url').appendChild(url)
 
 // email
 var email = document.createElement("a")
-email.setAttribute('href',`mailto:${decodedData[6]}`)
+email.setAttribute('href', 'mailto:' + decodedData[6])
 email.textContent = decodedData[6]
 document.getElementById('email').appendChild(email)
 
@@ -58,8 +58,8 @@ var clickEvent = ((document.ontouchstart!==null)?'click':'touchstart')
 if ( OS == 'Android' || OS == 'iOS' ) {
     var btn = document.createElement("a")
     btn.textContent = "Enroll Device"
-    btn.setAttribute('href',deeplink)
-    btn.setAttribute('class','button')
+    btn.setAttribute('href', deeplink)
+    btn.setAttribute('class', 'button')
     btn.addEventListener(clickEvent, function() {
         var timer = setTimeout( function()  { 
             if (!document.hidden) {
