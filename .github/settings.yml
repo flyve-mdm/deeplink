@@ -1,6 +1,6 @@
 repository:
   name: deeplink
-  description: Web site to resolve FLyve MDM deeplinks
+  description: Web site to resolve Flyve MDM deeplinks
   homepage: https://github.com/flyve-mdm/deeplink
   topics: flyve-mdm, deeplink
   private: false
@@ -16,6 +16,8 @@ labels:
     color: f44336
   - name: build
     color: 795548
+  - name: cherry-pick
+    color: af1c46
   - name: ci
     color: fbca04
   - name: documentation
