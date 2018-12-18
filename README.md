@@ -9,13 +9,14 @@
 [![IRC Chat](https://img.shields.io/badge/IRC-%23flyvemdm-green.svg)](http://webchat.freenode.net/?channels=flyve-mdm)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
-Flyve MDM is a mobile device management software that enables you to secure and manage all the mobile devices of your business via a unique web-based console (MDM).
+Flyve MDM allows your company to maintain control of all mobile devices, whilst providing comprehensive protection and enhanced security for sensitive corporate data, via a centralized management console.
 
 To get started, check out [Flyve MDM website](https://flyve-mdm.com/)!
 
 ## Table of Contents
 
 * [Synopsis](#synopsis)
+* [Build Status](#build-status)
 * [Installation](#installation)
 * [Versioning](#versioning)
 * [Contact](#contact)
@@ -50,6 +51,12 @@ In case the invitation is opened with the browser of the device, it will display
 ### Redirect to the Play Store
 
 If the App isn't installed, the deeplink will redirect to the Play Store to download the MDM Agent in order to proceed with the enrollment.
+
+## Build status
+
+| **LTS** | **Bleeding Edge** |
+|:---:|:---:|
+| [![Build Status](https://circleci.com/gh/flyve-mdm/deeplink/tree/master.svg?style=svg)](https://circleci.com/gh/flyve-mdm/deeplink/tree/master) | [![Build Status](https://circleci.com/gh/flyve-mdm/deeplink/tree/develop.svg?style=svg)](https://circleci.com/gh/flyve-mdm/deeplink/tree/develop) |
 
 ## Installation
 
